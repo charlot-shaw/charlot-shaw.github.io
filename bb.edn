@@ -24,6 +24,11 @@
                     :task (qb-api/quickblog qb-opts)}
   quickblog:clean {:doc "Cleans quickblog directly"
                    :task (qb-api/clean qb-opts)}
+  github:pages    {:doc "Moves files into the doc directory"
+                   :depends [render]
+                   :task (do
+                           (println "Moving files into /docs")
+                           (fs/copy-tree "public/" "docs/" {:replace-existing true}))}
   static-copyover {:doc "Moves static content into the public folder"
                    :task (do
                            (println "Copying static files")
