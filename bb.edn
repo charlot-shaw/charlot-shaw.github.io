@@ -25,4 +25,7 @@
   quickblog:clean {:doc "Cleans quickblog directly"
                    :task (qb-api/clean qb-opts)}
   static-copyover {:doc "Moves static content into the public folder"
-                   :task (fs/copy-tree "static/" "public/" {:replace-existing true})}}}
+                   :task (do
+                           (println "Copying static files")
+                           (fs/copy-tree "static/" "public/" {:replace-existing true})
+                           (fs/copy-tree "assets/" "public/assets/" {:replace-existing true}))}}}
