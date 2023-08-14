@@ -1,0 +1,16 @@
+<div class="box-padding">
+    <h1 class="title is-3">{{title|title}}</h1>
+    <ul class="cluster">
+        {% for post-link in post-links|sort-by-reversed:date %}
+        <li class="box">
+            <p>
+                <a href="{{post-link.url}}">
+                    {{post-link.title}}
+                </a>
+            </p>
+            <p>
+                {{post-link.date}}
+            </p>
+        </li>
+        {% endfor %}
+</div>

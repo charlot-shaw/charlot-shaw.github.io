@@ -1,0 +1,28 @@
+{:deps {io.github.borkdude/quickblog
+        #_"You use the newest SHA here:"
+        {:git/sha "792f952be8fe0f3326b293dde3251f6a09deaf0c"}
+        #_{:local/root "../105_quickblog"}}
+ :paths ["."]
+ :tasks
+ {:requires ([quickblog.cli :as qb-cli]
+             [quickblog.api :as qb-api]
+             [babashka.fs :as fs])
+  :init (def qb-opts {:blog-title "Sparrows.dev"
+                      :blog-description "Code and RPGs"
+                      :favicon true
+                      :num-index-posts 4
+                      :sharing-url "https://unwarysage"
+                      :blog-root "blog/"
+                      :out-dir "public/blog"})
+
+  render    {:doc "Render the whole site"
+             :depends [quickblog:render
+                       static-copyover]}
+  quickblog {:doc "Start blogging quickly! Run `bb quickblog help` for details."
+             :task (qb-cli/dispatch qb-opts)}
+  quickblog:render {:doc "Renders quickblog directly"
+                    :task (qb-api/quickblog qb-opts)}
+  quickblog:clean {:doc "Cleans quickblog directly"
+                   :task (qb-api/clean qb-opts)}
+  static-copyover {:doc "Moves static content into the public folder"
+                   :task (fs/copy-tree "static/" "public/" {:replace-existing true})}}}
