@@ -81,10 +81,20 @@ footer {
 
 .card {
   border-radius: var(--radius-2);
-  padding: var(--size-fluid-2);
+  padding: var(--size-fluid-3);
   box-shadow: var(--shadow-2);
   background: var(--bg2);
   border: var(--border-size-2) solid var(--bg4);
+}
+
+.card ol, .card ul {
+  padding-inline-start: var(--size-4);
+}
+
+.card:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main-title {
