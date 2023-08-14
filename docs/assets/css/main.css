@@ -91,6 +91,11 @@ footer {
   padding-inline-start: var(--size-4);
 }
 
+.card > h1:first-child, .card > h2:first-child {
+  margin-block-start: calc(var(--size-fluid-1) * -1);
+  margin-block-end: var(--size-fluid-2);
+}
+
 .card:first-child {
   display: flex;
   flex-direction: column;
@@ -132,15 +137,27 @@ footer {
   height: fit-content;
   gap: var(--size-fluid-1);
   grid-template-areas:
-  "intro"
-  "skill-lang"
-  "skill-tools"
-  "skill-skills"
-  "skill-hobbies";
+   "intro"
+   "skill-lang"
+   "skill-tools"
+   "skill-skills"
+   "skill-hobbies";
   grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
-@media (min-width: 80ch)  {
+@media (min-width: 60ch) {
+  .layout {
+    grid-template-areas:
+      "intro intro"
+      "skill-lang skill-tools"
+      "skill-skills skill-hobbies";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 120ch)  {
   .layout {
     grid-template-areas: 
      "intro skill-lang skill-tools"
@@ -149,6 +166,7 @@ footer {
     grid-template-rows: 1fr 1fr;
   }
 }
+
 .skill-box {
   color: var(--fg);
   font-size: var(--font-size-fluid-1);
