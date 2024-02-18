@@ -50,4 +50,4 @@ Sister of Ragg, a ranger who is always ready for action. Has decided that this w
 
 
 # The Crew is Assembled
-These are all the PCs for my college game of the past year or so. The game itself is in fifth edition Dungeons and  Dragons, with a homebrew setting tentatively called The Lonely Kingdom. This is its third major story arc. [The next posts](/posts/2018-09-29-lonely-kingdom-unsought-deeps-1) will be a log of the parties first session of misdaventures in the unsought deeps.
+These are all the PCs for my college game of the past year or so. The game itself is in fifth edition Dungeons and  Dragons, with a homebrew setting tentatively called The Lonely Kingdom. This is its third major story arc. [The next posts](@/blog/lonely_kingdom_log1.md) will be a log of the parties first session of misdaventures in the unsought deeps.

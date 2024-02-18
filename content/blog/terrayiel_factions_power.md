@@ -6,7 +6,7 @@ tags = ["rpg", "worldbuilding", "fantasy", "terrayiel", "migrated from Jekyll"]
 +++
 
 
-|[Previous: Souls and Magic](/posts/2018-08-22-terrayiel-souls-and-magic)|
+|[Previous: Souls and Magic](@/blog/terrayiel_souls_magic.md)|
 
 # A Thin Peace
 Terrayiel is in the middle of an uneasy peace after a sudden war. Everyone is certain it will not last long, many still believe that an eventual victory would be worth the continuation of hostilities. Here are some of the factions at large in Terrayiel.

@@ -8,7 +8,7 @@ tags = ["rpg", "fantasy", "session log", "lonely kingdom"]
 
 # The Story So Far
 
-Having been subcontracted into the fulfilling prophecies business, [our intrepid heroes](/posts/2018-09-29-lonely-kingdom-dramatis-personae)
+Having been subcontracted into the fulfilling prophecies business, [our intrepid heroes](@/blog/lonely_kingdom_dramatis_personae.md)
 had dabbled with dragons, dealt with demons, disappointed an angel, met a god, two kings, a prince and arrested one of them. They are seeking parts of the Omulkur, an artifact that has an almost ominous lack of legends associated with it.
 They have secured one piece, in its shrine in the center of a labyrinth, and have in their possession a second piece: a pin, of grey-black stone, that utterly cancels and nullifies magic.
 They seek its matching counterpart in the Underdark, based on the dying words of a burning halfling.
@@ -55,4 +55,4 @@ Veidrie seems to have limits he's not very good at respecting concerning what he
 # End Session One
 Thanks for reading! That was a lot of ground to cover.
 
-Next time: [Akthas, and the party gets itself entombed](/posts/2018-10-01-lonely-kingdom-unsought-deeps-2) 
+Next time: [Akthas, and the party gets itself entombed](@/blog/lonely_kingdom_log2.md) 

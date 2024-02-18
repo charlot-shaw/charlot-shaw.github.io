@@ -5,7 +5,7 @@ date = "2018-08-22"
 tags = ["rpg", "worldbuilding", "fantasy", "terrayiel", "migrated from Jekyll"]
 +++
 
-|[Previous: Gods And The Church](/posts/2018-08-22-terrayiel-gods-and-the-church)|[Next: Factions and Power](/posts/2018-09-05-terrayiel-factions-and-power)|
+|[Previous: Gods And The Church](@/blog/terrayiel_gods_church.md)|[Next: Factions and Power](@/blog/terrayiel_factions_power.md)|
 
 
 # Souls

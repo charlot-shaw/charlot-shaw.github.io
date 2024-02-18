@@ -5,7 +5,7 @@ date = "2018-08-22"
 tags = ["rpg", "worldbuilding", "fantasy", "terrayiel", "migrated from Jekyll"]
 +++
 
-[Previous: Overview](/posts/2018-08-20-terrayiel-a-dark-fantasy)|[Next: Souls And Magic](/posts/2018-08-22-terrayiel-souls-and-magic)
+[Previous: Overview](@/blog/terrayiel_dark_fantasy.md)|[Next: Souls And Magic](@/blog/terrayiel_souls_magic.md)
 
 # Gods of the Twain Church
 The Church in Terrayiel follows a dualistic religion, and though it does not have a monopoly of faith, they are a state religion for most of the central kingdoms. Following the Dusk War and the Churchs ascension, they became a lot more intolerant, declaring themselves the true faith and defenders of humanity. All other faiths became fronts for Mhal in the eyes of the Church, at best a distraction for the faithful.

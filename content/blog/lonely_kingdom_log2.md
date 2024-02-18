@@ -8,7 +8,7 @@ tags = ["rpg", "fantasy", "session log", "migrated from Jekyll", "lonely kingdom
 # Previously
 The party was united for better or worse, and sent along to the Dwarrow capitol,
 placed under the observation of the Scholar Veidrie.
-[The previous session in full.](/posts/2018-09-29-lonely-kingdom-unsought-deeps-1)
+[The previous session in full.](@/blog/lonely_kingdom_log1.md)
 
 # Forge-Gaurd Master Akthas
 Veidrie let a female dwarrow into the room, who had insignia of pretty significant rank,
@@ -108,4 +108,4 @@ It taunted them a last time, before fleeing down an unexplored staircase.
 # End Session Two
 Thanks for reading!
 
-Next time: "Explosives, Traps, Rats and Your Objective: Things you find in tombs."
+Next time: "Explosives, Traps, Rats and Your Objective: Things you find in tombs."w
