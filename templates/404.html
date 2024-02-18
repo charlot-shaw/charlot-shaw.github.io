@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{% if page %}{{ page.lang }}{% else %}{{ config.default_language }}{% endif %}">
+<head>
+    {% include "head.html" %}
+</head>
+<body>
+    <div class="wrapper">
+
+      <main>
+        <h1>404</h1>
+        <p>It remains unwritten or lost.</p>
+        <a href="/">Turn back.</a>
+      </main>
+      <footer>
+          {% include "footer.html" %}
+      </footer>
+    </div>
+</body>
+</html>
