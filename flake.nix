@@ -17,13 +17,15 @@
                 pkgs = nixpkgs.legacyPackages.${system};
             in {
             packages = {
-                default = pkgs.stdenv.mkDerivation rec {
+                sparrowssite = pkgs.stdenv.mkDerivation rec {
+                    default = true;
                     pname = "sparrows.dev-site";
                     version = "0.0.1";
                     src = ./.;
 
                     buildInputs = with pkgs; [
                         zola
+                        just
                     ];
 
                     buildPhase = ''
@@ -44,5 +46,4 @@
             };
         }
         );
-    
 }
