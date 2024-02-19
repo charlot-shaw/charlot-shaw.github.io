@@ -10,12 +10,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with: 
+          submodules: recursive
       
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v9
       
       - name: Build site
-        run: nix build '.?submodules=1'
+        run: nix build
       
       - name: Prepare results for git upload.
         run: |
