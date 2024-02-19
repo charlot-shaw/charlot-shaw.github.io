@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with: 
           submodules: recursive
       
@@ -17,7 +17,9 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@v9
       
       - name: Build site
-        run: nix build
+        run: |
+          git add -A
+          nix build
       
       - name: Prepare results for git upload.
         run: |
