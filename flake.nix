@@ -16,9 +16,10 @@
             let 
                 pkgs = nixpkgs.legacyPackages.${system};
             in {
-            packages = {
+            packages = rec {
+                default = sparrowssite;
+
                 sparrowssite = pkgs.stdenv.mkDerivation rec {
-                    default = true;
                     pname = "sparrows.dev-site";
                     version = "0.0.1";
                     src = ./.;
@@ -26,14 +27,19 @@
                     buildInputs = with pkgs; [
                         zola
                         just
+                        linkchecker
                     ];
 
                     buildPhase = ''
                       zola build
                     '';
 
+                    # Check links, homepage and CNAME file
                     checkPhase = ''
                     zola check
+
+                    test -f $out/public/CNAME"
+                    test -f $out/public/index.html"
                     '';
 
                     installPhase = ''
