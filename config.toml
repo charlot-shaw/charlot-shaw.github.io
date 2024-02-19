@@ -2,7 +2,7 @@
 base_url = "https://sparrows.dev"
 
 title = "Sparrows.dev"
-# description = "A webshelf for my web things."
+description = "A webshelf for my web things."
 generate_feed = true
 
 #theme
@@ -17,8 +17,7 @@ compile_sass = false
 build_search_index = true
 
 taxonomies = [
-    { name = "tags", feed = true, lang = "zh" },
-    { name = "categories", feed = true, lang = "zh" },
+    { name = "tags", feed = true },
 ]
 
 [markdown]
