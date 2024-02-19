@@ -18,7 +18,7 @@ jobs:
         run: nix build '.?submodules=1'
       
       - name: Prepare results for git upload.
-      - run: |
+        run: |
           cd result/public
           git init
           git add -A
