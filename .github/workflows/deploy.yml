@@ -18,7 +18,7 @@ jobs:
       
 
       - name: Check directory
-        run: nix-shell -p tree.out --run 'tree ... .'
+        run: nix-shell -p tree.out --run 'tree .'
 
       - name: Build site
         run: nix build '.?submodules=1'
