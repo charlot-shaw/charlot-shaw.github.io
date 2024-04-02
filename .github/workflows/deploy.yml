@@ -16,6 +16,10 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v9
       
+
+      - name: Check directory
+        run: nix-shell -p tree.out --run 'tree ... .'
+
       - name: Build site
         run: nix build '.?submodules=1'
       
