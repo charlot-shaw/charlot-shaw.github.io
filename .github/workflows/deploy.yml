@@ -19,6 +19,9 @@ jobs:
 
       - name: Check directory
         run: nix-shell -p tree.out --run 'tree .'
+      
+      - name: Try forcing submodule updating
+        run: git submodule update --init
 
       - name: Build site
         run: nix build '.?submodules=1'
