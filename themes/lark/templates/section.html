@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">{{ section.title }}</h1>
+<div class="block">
 
-{{ section.content | safe }}
+  <h1 class="title">{{ section.title }}</h1>
+  
+  {{ section.content | safe }}
+</div>
 
 {% if paginator %}
 {% set pages = paginator.pages %}
@@ -11,10 +14,34 @@
 {% set pages = section.pages %}
 {% endif %}
 
-<ul class="titleList">
+<ul class="block">
 {% for page in pages %}
-  <li>
-    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+  <li class="block">
+    <div class="card">
+      <div class="card-header">
+        <span>
+          <a class="card-header-title" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        </span>
+      </div>
+
+      <div class="card-content content">
+
+        {% if page.summary %}
+        <div class="content">
+          {{ page.summary | safe }}
+        </div>
+        {% endif %}
+
+        {% if page.taxonomies.tags %}
+        {% for tag in page.taxonomies.tags %}
+        <a class="tag is-link" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+        {% endif %}
+      </div>
+
+
+    </div>
+    
   </li>
 {% endfor %}
 </ul>

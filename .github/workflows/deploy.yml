@@ -20,14 +20,8 @@ jobs:
       - name: Check directory
         run: nix-shell -p tree.out --run 'tree .'
       
-      - name: Try forcing submodule updating
-        run: git submodule update --init
-        
-      - name: Try Add manually
-        run: git add themes
-
-      - name: Build site
-        run: nix build '.?submodules=1'
+      - name: Build Blog
+        run: nix develop --command nix build 
       
       - name: Prepare results for git upload.
         run: |
