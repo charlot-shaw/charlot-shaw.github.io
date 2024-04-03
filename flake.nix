@@ -8,18 +8,23 @@
             url = "github:numtide/flake-utils";
         };
 
+        bulma = {
+            url = "github:jgthms/bulma/main";
+            flake = false;
+        };
+
     };
 
-    outputs = {self,nixpkgs, flake-utils,...}:
+    outputs = {self,nixpkgs, flake-utils, bulma, ...}:
 
         flake-utils.lib.eachDefaultSystem (system: 
             let 
                 pkgs = nixpkgs.legacyPackages.${system};
             in {
             packages = rec {
-                default = sparrowssite;
+                default = sparrowsSite;
 
-                sparrowssite = pkgs.stdenv.mkDerivation rec {
+                sparrowsSite = pkgs.stdenv.mkDerivation rec {
                     pname = "sparrows.dev-site";
                     version = "0.0.1";
                     src = ./.;
@@ -29,6 +34,8 @@
                         just
                         linkchecker
                     ];
+
+                    # TODO make the flake input of Bulma work.
 
                     buildPhase = ''
                       zola build
