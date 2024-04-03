@@ -31,14 +31,20 @@
 
                     buildInputs = with pkgs; [
                         zola
-                        just
-                        linkchecker
+                        html-minifier
                     ];
 
                     # TODO make the flake input of Bulma work.
 
                     buildPhase = ''
-                      zola build
+                      zola build --output-dir $out/public
+
+                      html-minifier --collapse-whitespace --preserve-line-breaks \
+                                    --remove-comments \
+                                    --minify-css true --remove-redundant-attributes \
+                                    --remove-script-type-attributes \
+                                    --minify-urls String \
+                                    --input-dir $out/public/ --output-dir $out/public/ --file-ext html
                     '';
 
                     # Check links, homepage and CNAME file
@@ -47,13 +53,7 @@
 
                     test -f $out/public/CNAME"
                     test -f $out/public/index.html"
-                    '';
 
-                    installPhase = ''
-                    runHook preInstall
-                    mkdir -p $out
-                    cp -r public/ $out
-                    runHook postInstall
                     '';
                 };
             };
