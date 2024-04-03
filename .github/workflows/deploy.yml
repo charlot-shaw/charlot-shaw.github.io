@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with: 
-          submodules: recursive
       
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v9
@@ -21,21 +19,24 @@ jobs:
         run: nix-shell -p tree.out --run 'tree .'
       
       - name: Build Blog
-        run: nix develop --command nix build 
-      
-      - name: Prepare results for git upload.
-        run: |
-          cd result/public
-          git init
-          git add -A
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m 'deploy'
+        run: nix develop --command nix build
 
-      - name: Force push to destination branch
-        uses: ad-m/github-push-action@v0.5.0
+      - name: Upload blog
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          force: true
-          directory: ./results/public
+          path: "result/"
+  
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      
