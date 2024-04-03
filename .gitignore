@@ -1,10 +1,8 @@
-public/*
-result/*
-.direnv/*
+public/
+result
+.direnv/
 .calva/
 .clj-kondo/
 .lsp/
 .work/
 .portal/
-
-public/
