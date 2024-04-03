@@ -6,7 +6,7 @@ description = "A webshelf for my web things."
 generate_feed = true
 
 #theme
-theme = "anemone"
+theme = "lark"
 
 
 

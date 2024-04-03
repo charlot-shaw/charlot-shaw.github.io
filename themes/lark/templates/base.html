@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{% if page %}{{ page.lang }}{% else %}{{ config.default_language }}{% endif %}" 
+style="height: 100%;
+       --bulma-text-h: 256deg;
+       --bulma-text-s: 79%;
+       --bulma-text-l: 95%;
+       --bulma-primary-h: 263deg;
+       --bulma-primary-s: 76%;
+       --bulma-primary-l: 72%;
+       --bulma-link-h: 290deg;
+       --bulma-link-s: 76%;
+       --bulma-link-l: 57%;">
+<head>
+    {% include "head.html" %}
+</head>
+<body class="has-navbar-fixed-top is-flex is-flex-direction-column" style="height: 100%;">
+      <header class="flex-align-self-flex-start">
+          {% include "header.html" %}
+      </header>
+      <main class="section flex-align-self-flex-center ">
+          {% block content %}
+          {% endblock content %}
+      </main>
+      <footer class="footer flex-align-self-flex-end" style="margin-block-start: auto;">
+          {% include "footer.html" %}
+      </footer>
+</body>
+</html>

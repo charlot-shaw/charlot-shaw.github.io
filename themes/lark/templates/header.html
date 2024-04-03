@@ -1,0 +1,38 @@
+{% set current_lang = config.default_language %}
+{% if page %}
+  {% set current_lang = page.lang %}
+{% elif section %}
+  {% set current_lang = section.lang %}
+{% endif %}
+{% if config.extra.header_nav %}
+  <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main-navigation" x-data="{closed: true}">
+
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <p class="is-family-monospace has-weight-bold">
+          {{config.title}}
+        </p>
+      </a>
+      <a class="navbar-burger" :class="{'is-active': !closed }" x-on:click="closed = !closed">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" :class="{'is-active': !closed }">
+      <div class="navbar-start">
+        {% for nav_item in config.extra.header_nav %}
+        <a href="{{ nav_item.url }}"
+           {% if nav_item.reltype %}
+           rel="{{ nav_item.reltype }}"
+           {%endif%}
+           class="{% if current_url and nav_item.url == current_url %}is-active{% endif %} navbar-item">
+          {% set language_key = 'name_' ~ current_lang %}
+          {{ nav_item[language_key] }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+</nav>
+{% endif %}

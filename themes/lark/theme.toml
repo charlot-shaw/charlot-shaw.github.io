@@ -1,0 +1,12 @@
+name = "Lark"
+description = "A quick, Bulma based theme."
+license = "MIT"
+homepage = "https://github.com/Speyll/anemone"
+min_version = "0.0.1"
+
+[extra]
+
+
+[author]
+name = "Charlot Shaw"
+homepage = "https://www.sparrows.dev"

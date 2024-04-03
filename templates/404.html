@@ -3,17 +3,14 @@
 <head>
     {% include "head.html" %}
 </head>
-<body>
-    <div class="wrapper">
-
-      <main>
-        <h1>404</h1>
-        <p>It remains unwritten or lost.</p>
-        <a href="/">Turn back.</a>
+<body class="has-navbar-fixed-top">
+  {% include "header.html" %}
+      <main class="section">
+        <h1 class="title has-text-warning">404</h1>
+        <p class="subtitle">It remains unwritten or lost.</p>
       </main>
-      <footer>
+      <footer class="section">
           {% include "footer.html" %}
       </footer>
-    </div>
 </body>
 </html>
