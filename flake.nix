@@ -37,22 +37,22 @@
                     # TODO make the flake input of Bulma work.
 
                     buildPhase = ''
-                      zola build --output-dir $out/public
+                      zola build --output-dir $out
 
                       html-minifier --collapse-whitespace --preserve-line-breaks \
                                     --remove-comments \
                                     --minify-css true --remove-redundant-attributes \
                                     --remove-script-type-attributes \
                                     --minify-urls String \
-                                    --input-dir $out/public/ --output-dir $out/public/ --file-ext html
+                                    --input-dir $out/ --output-dir $out/ --file-ext html
                     '';
 
                     # Check links, homepage and CNAME file
                     checkPhase = ''
                     zola check
 
-                    test -f $out/public/CNAME"
-                    test -f $out/public/index.html"
+                    test -f $out/CNAME"
+                    test -f $out/index.html"
 
                     '';
                 };
