@@ -2,6 +2,7 @@
 title = "Anouncing Scurvy"
 date = "2021-05-21"
 authors = ["Charlot Shaw"]
+[taxonomies]
 tags = ["programming", "clojure", "reagent", "projects"]
 +++
 
