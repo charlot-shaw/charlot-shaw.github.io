@@ -1,7 +1,6 @@
 +++
 title = "Blog The Third: Nix and Zola"
 date = "2024-04-02"
-draft = true
 [taxonomies]
 tags = ["nix", "web", "meta", "zola", "github", "programming", "clojure"]
 +++
@@ -43,4 +42,19 @@ I picked out a theme, and started to work on Github Actions for my CI.
 Only there was a hitch. Zola wanted to use submodules, and I could not get Nix to cooperate on them.
 
 I mucked around for a while, and then in the name of having a working blog, opted to make a *very* quick theme using [Bulma](https://bulma.io).
-The skeleton of [Anemone Theme](https://anemone.pages.dev/) was stripped and cleaned to guide my own work, and over the course of an evening, things fell into place.
+The skeleton of [Anemone Theme](https://anemone.pages.dev/) was stripped and cleaned to guide my own work, and over the course of an evening or two, things fell into place.
+
+## Teething Problems
+
+I merged the repository histories of the new project and my prior blog, by modifying the upstream remotes and merging branches with `--allow-unrelated`. 
+This was messier than I would have liked, because I was unsure how much information would be lost as I rebased. Ultimately, I had some purging to do at the end.
+From there, it was messing with Github Actions to make a [workflow](https://github.com/charlot-shaw/charlot-shaw.github.io/blob/main/.github/workflows/deploy.yml)
+that worked between Nix, my name registrar, and Github.
+
+Biggest issue turned out to be whether the site was under `/public` or simply `/` (It was the latter).
+
+Also of note, was that my copy of my old homepage which had been placed into `/static/index.html` was overriding the Zola powered homepage, but in a way that
+didn't show up during `zola serve`
+
+After all those were sorted out, and DNS propogated, my new site came up, and I couldn't be happier. 
+There's still a lot to be done, like improving the homepage, restoring icons, and making better tag pages, but I can write blog posts now, and that's the key to having a blog ultimately.
