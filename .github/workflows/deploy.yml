@@ -14,10 +14,6 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v9
       
-
-      - name: Check directory
-        run: nix-shell -p tree.out --run 'tree .'
-      
       - name: Build Blog
         run: nix develop --command nix build
 
