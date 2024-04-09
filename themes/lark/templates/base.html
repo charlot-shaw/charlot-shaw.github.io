@@ -1,15 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% if page %}{{ page.lang }}{% else %}{{ config.default_language }}{% endif %}" 
-style="height: 100%;
-       --bulma-text-h: 256deg;
-       --bulma-text-s: 79%;
-       --bulma-text-l: 95%;
-       --bulma-primary-h: 263deg;
-       --bulma-primary-s: 76%;
-       --bulma-primary-l: 72%;
-       --bulma-link-h: 290deg;
-       --bulma-link-s: 76%;
-       --bulma-link-l: 57%;">
+<html lang="{% if page %}{{ page.lang }}{% else %}{{ config.default_language }}{% endif %}">
 <head>
     {% include "head.html" %}
 </head>
