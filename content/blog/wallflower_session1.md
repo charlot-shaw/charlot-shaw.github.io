@@ -2,7 +2,7 @@
 title = "No Room For A Wallflower: A LANCER campaign"
 date = "2021-03-02"
 [taxonomies]
-tags = ["rpg", "lancer", "session logs", "wallflower"]
+tags = ["rpg", "lancer", "session log", "wallflower"]
 +++
 
 ## No Room For A Wallflower
