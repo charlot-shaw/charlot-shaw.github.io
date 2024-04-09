@@ -1,6 +1,7 @@
 +++
 title = "Blog The Third: Nix and Zola"
 date = "2024-04-02"
+draft = true
 [taxonomies]
 tags = ["nix", "web", "meta", "zola", "github", "programming", "clojure"]
 +++
