@@ -30,7 +30,9 @@ highlight_code = true
 
 default_theme = "dark"
 
+list_pages = true
+
 header_nav = [
-    {url = "/", name_en = "home"},
-    {url = "/blog", name_en = "blog"}
+    {url = "/", name_en = "Home"},
+    {url = "/blog", name_en = "Blog"}
 ]
