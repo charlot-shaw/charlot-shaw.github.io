@@ -4,7 +4,7 @@
 <div class="block">
 
   <h1 class="title">{{ section.title }}</h1>
-  
+
   {{ section.content | safe }}
 </div>
 
@@ -15,7 +15,7 @@
 {% endif %}
 
 <ul class="block">
-{% for page in pages %}
+  {% for page in pages %}
   <li class="block">
     <div class="card">
       <div class="card-header">
@@ -23,30 +23,86 @@
           <a class="card-header-title" href="{{ page.permalink | safe }}">{{ page.title }}</a>
         </span>
       </div>
-
       <div class="card-content content">
-
         {% if page.summary %}
         <div class="content">
           {{ page.summary | safe }}
         </div>
         {% endif %}
-
         {% if page.taxonomies.tags %}
         {% for tag in page.taxonomies.tags %}
         <a class="tag is-link" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
         {% endfor %}
         {% endif %}
       </div>
-
-
     </div>
-    
   </li>
-{% endfor %}
+  {% endfor %}
 </ul>
 
-{% if paginator %}
-<div class="metaData">{% if paginator.previous %}<a href="{{ paginator.first }}">⥶</a> &nbsp <a href="{{ paginator.previous }}"><</a>{% endif %} &nbsp {{ paginator.current_index }} / {{ paginator.number_pagers }} &nbsp {% if paginator.next %}<a href="{{ paginator.next }}">></a> &nbsp <a href="{{ paginator.last }}">⥸</a>{% endif %}</div>
+{% if paginator and paginator.number_pagers > 1 %}
+<nav class="pagination" role="navigation" aria-label="pagination">
+  {% if paginator.previous %}
+  <a href="{{ paginator.previous }}" aria-label="Goto page {{ paginator.current_index - 1}}"
+    class="pagination-previous">Previous</a>
+  {% else %}
+  <a href="{{ paginator.previous }}" aria-disabled="true" class="pagination-previous is-disabled">Previous</a>
+  {% endif %}
+
+  {% if paginator.next %}
+  <a href="{{ paginator.next }}" aria-label="Goto page {{ paginator.current_index + 1}}"
+    class="pagination-next">Next</a>
+  {% else %}
+
+  <a href="{{ paginator.next }}" aria-disabled="true" class="pagination-next is-disabled">Next</a>
+  {% endif %}
+
+  <ul class="pagination-list">
+    {% if paginator.current_index == 1%}
+    <li>
+      <a class="pagination-link is-current" aria-label="Goto page 1" href="{{paginator.first}}">1</a>
+    </li>
+    {% else %}
+    <li>
+      <a class="pagination-link" aria-label="Goto page 1" href="{{paginator.first}}">1</a>
+    </li>
+    {% endif %}
+
+    {% if paginator.number_pagers > 2 and paginator.current_index != 1 and paginator.current_index !=
+    paginator.number_pagers%}
+
+    {% if paginator.current_index -1 > 1 %}
+    <li>
+      <span class="pagination-ellipsis">&hellip;</span>
+    </li>
+    {% endif%}
+
+    <li>
+      <a class="pagination-link is-current"
+        href="{{paginator.base_url}}/{{paginator.current_index}}">{{paginator.current_index}}</a>
+    </li>
+
+    {% if paginator.current_index + 1 < paginator.number_pagers %} <li>
+      <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+
+      {% endif %}
+      {% endif %}
+
+      {% if paginator.current_index == paginator.number_pagers%}
+      <li>
+        <a class="pagination-link is-current" aria-label="Goto last page, {{ paginator.number_pagers }}"
+          href="{{paginator.last}}">{{paginator.number_pagers}}</a>
+      </li>
+      {% else %}
+      <li>
+        <a class="pagination-link" ria-label="Goto last page, {{ paginator.number_pagers }}"
+          href="{{paginator.last}}">{{paginator.number_pagers}}</a>
+      </li>
+      {% endif %}
+
+  </ul>
+</nav>
+
 {% endif %}
 {% endblock content %}
