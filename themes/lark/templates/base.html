@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{% if page %}{{ page.lang }}{% else %}{{ config.default_language }}{% endif %}">
+<html lang="{% if page %}{{ page.lang }}{% else %}{{ config.default_language }}{% endif %}"
+      style="height: 100%;">
 <head>
     {% include "head.html" %}
 </head>
