@@ -2,9 +2,7 @@
 
 
 {% block content %}
-<div class="content test">
-  {{ section.content | safe }}
-</div>
+
 
 {% if config.extra.list_pages %}
 
@@ -14,19 +12,28 @@
 {% set pages = section.pages %}
 {% endif %}
 
-<ul class="titleList">
-{% for page in pages %}
-  <li>
-    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-    <br />
-    {{ page.description }}
-  </li>
-{% endfor %}
-</ul>
+<div class="fixed-grid has-1-cols-mobile has-3-cols-tablet">
+  <div class="grid">
+    {% for page in pages %}
+    <div class="cell card mb-0" style="align-self: stretch;">
+      <div class="card-header">
+        <h2 class="card-header-title">
+          {{ page.title}}
+        </h2>
+      </div>
+      <div class="card-content">
+        {{ page.content | safe}}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
 {% if paginator %}
 <div class="metaData">{% if paginator.previous %}<a href="{{ paginator.first }}">⥶</a> &nbsp <a href="{{ paginator.previous }}"><</a>{% endif %} &nbsp {{ paginator.current_index }} / {{ paginator.number_pagers }} &nbsp {% if paginator.next %}<a href="{{ paginator.next }}">></a> &nbsp <a href="{{ paginator.last }}">⥸</a>{% endif %}</div>
 {% endif %}
 
 {% endif %}
+
 {% endblock content %}
+
