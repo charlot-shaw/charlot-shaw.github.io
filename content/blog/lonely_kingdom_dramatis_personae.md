@@ -8,6 +8,8 @@ tags = ["rpg", "fantasy", "lonely kingdom", "migrated from Jekyll"]
 # Preamble
 Sorry for the silence, starting the semester blew a hole in a lot of my well laid plans. To recommence posting, I'm going to start putting my RPG groups (mis)adventure logs up on here. However, the campaign is a long form one, and so a lot of history has happened already. Let's start with the characters.
 
+<!-- more -->
+
 # Dramatis Personae
 In no particular order...
 

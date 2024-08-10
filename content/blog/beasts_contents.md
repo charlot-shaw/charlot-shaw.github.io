@@ -8,7 +8,7 @@ tags = ["rpg", "grimswold", "monster"]
 *Blows dust off the old blog*
 
 It's been a bit. I've done a number of RPG related things, and will continue to do more. Whether I'll return to publishing regularly is another matter. I'd personally love to, but the time and headspace required can be hard to find. All that aside, I have a prompt to answer.
-
+<!-- more -->
 
 # Grave Crab
 

@@ -13,6 +13,8 @@ had dabbled with dragons, dealt with demons, disappointed an angel, met a god, t
 They have secured one piece, in its shrine in the center of a labyrinth, and have in their possession a second piece: a pin, of grey-black stone, that utterly cancels and nullifies magic.
 They seek its matching counterpart in the Underdark, based on the dying words of a burning halfling.
 
+<!-- more -->
+
 ## The Descent
 The Dwarrow of the Underdark have pretty much sealed the deeper reaches off, and so they found on the few surface forts, built against the possibility of a sudden army of Dwarrow rising from the deep. In its abandoned state, it offered few challenges to our heroes. They pressed onwards and downwards, and found a suitably majestic Dwarrow manhole, almost twenty feet in diameter.
 

@@ -5,6 +5,9 @@ date = "2018-09-05"
 tags = ["rpg", "worldbuilding", "fantasy", "terrayiel", "migrated from Jekyll"]
 +++
 
+The factions that define the high-level powerstructures and organization of the world.
+
+<!-- more -->
 
 |[Previous: Souls and Magic](@/blog/terrayiel_souls_magic.md)|
 
