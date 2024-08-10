@@ -1,7 +1,11 @@
 <div class=level>
   <div class="level-left">
     <p>
-      Built with <a target="_blank" rel="noopener noreferrer" href="https://www.getzola.org">Zola</a> using <a target="_blank" rel="noopener noreferrer" href="https://bulma.io">Bulma</a> &amp; <a target="_blank" rel="noopener noreferrer" href="https://alpinejs.dev">alpine js.</a><br>
+      Built with <a target="_blank" rel="noopener noreferrer" href="https://www.getzola.org">Zola</a> using 
+      <a target="_blank" rel="noopener noreferrer" href="https://bulma.io">Bulma</a>,
+      <a target="_blank" rel="noopener noreferrer" href="https://alpinejs.dev">alpine js </a> &amp;
+      <a target="_blank" rel="noopener noreferrer" href="https://feathericons.com/">feather icons.</a>
+      <br>
     </p>
   </div>
   {% if config.mode == "serve"%}
@@ -12,7 +16,13 @@
   {% endif %}
   {% if config.generate_feed %}
   <div class="level-right">
-    <a class="" target="_blank" rel="noopener noreferrer" href="{{ get_url(path="atom.xml", trailing_slash=false) }}" title="Subscribe via RSS for updates."><svg class="icon"><use href="{{ get_url(path='icons.svg#rss', trailing_slash=false) | safe }}"></use></svg></a>
+    <a target="_blank" rel="noopener noreferrer" href="{{ get_url(path="atom.xml", trailing_slash=false) }}" title="Subscribe via RSS for updates.">
+      <i data-feather="rss"></i>
+    </a>
   </div>
   {% endif %}
+
+  <script>
+    feather.replace();
+  </script>
 </div>

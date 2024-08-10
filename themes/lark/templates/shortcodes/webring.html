@@ -1,4 +1,10 @@
-<span class="webring">
-<a class="icons__background" href={{prev}}><svg class="icons icons__background"><use href="{{ get_url(path='icons.svg#chevronLeft', trailing_slash=false) | safe }}"></use></svg></a> 
-<a href={{webring}}>{{webringName}}</a> 
-<a class="icons__background" href={{next}}><svg class="icons icons__background"><use href="{{ get_url(path='icons.svg#chevronRight', trailing_slash=false) | safe }}"></use></svg></a></span>
+<span class="level">
+<div class="level-left">
+    <a class="icon" href={{prev}}><i data-feather="chevron-left"></i></a> 
+</div>
+<div class="level-item">
+    <a href={{webring}}>{{webringName}}</a> 
+</div>
+<div class="level-right">
+    <a class="icon" href={{next}}><i data-feather="chevron-right"></i></a></span>
+</div>
