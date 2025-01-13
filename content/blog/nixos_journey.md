@@ -7,3 +7,5 @@ tags = ["tech", "nix"]
 +++
 
 * start from misterio
+
+{{ webring (prev="https://xkcd.com", next = "https://howtobeawerewolf.com", webring = "", webringName="Sparrows.dev")}}
