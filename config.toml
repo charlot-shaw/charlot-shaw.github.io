@@ -8,7 +8,9 @@ generate_feed = true
 #theme
 theme = "lark"
 
-
+# Slugify
+slugify.anchors = "on"
+slugify.paths = "safe"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
