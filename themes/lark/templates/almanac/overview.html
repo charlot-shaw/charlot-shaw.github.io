@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="block">
+
+  <h1 class="title">{{ section.title }}</h1>
+  <div class="content">
+
+    {{ section.content | safe }}
+  </div>
+</div>
+
+{% if paginator %}
+{% set pages = paginator.pages %}
+{% else %}
+{% set pages = section.pages %}
+{% endif %}
+
+<ul class="block">
+  {% for page in pages %}
+  <li class="block">
+    <div class="card">
+      <div class="card-header">
+        <span>
+          <a class="card-header-title" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        </span>
+      </div>
+      <div class="card-content content">
+        {% if page.summary %}
+        <div class="content">
+          {{ page.summary | safe }}
+        </div>
+        {% endif %}
+        {% if page.taxonomies.tags %}
+        {% for tag in page.taxonomies.tags %}
+        <a class="tag is-link" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+
+
+{% endblock content %}
