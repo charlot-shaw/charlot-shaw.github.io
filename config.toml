@@ -20,6 +20,7 @@ build_search_index = true
 
 taxonomies = [
     { name = "tags", feed = true },
+    { name = "section", feed = false},
 ]
 
 [markdown]
@@ -36,5 +37,6 @@ list_pages = true
 
 header_nav = [
     {url = "/", name_en = "Home"},
-    {url = "/blog", name_en = "Blog"}
+    {url = "/blog", name_en = "Blog"},
+    {url = "/almanac", name_en = "Almanac"}
 ]

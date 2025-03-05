@@ -4,8 +4,10 @@
 <div class="block">
 
   <h1 class="title">{{ section.title }}</h1>
+  <div class="content">
 
-  {{ section.content | safe }}
+    {{ section.content | safe }}
+  </div>
 </div>
 
 {% if paginator %}
