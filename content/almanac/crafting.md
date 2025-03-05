@@ -2,7 +2,6 @@
 title = "Crafting"
 date = "2025-03-03"
 authors = ["Charlot Shaw"]
-draft = true
 +++
 
 Jacks wield the best gear they can scrounge, buy, or make.

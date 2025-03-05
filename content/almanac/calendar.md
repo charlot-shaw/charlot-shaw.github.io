@@ -2,7 +2,6 @@
 title = "Calendar"
 date = "2025-03-03"
 authors = ["Charlot Shaw"]
-draft = true
 +++
 
 4 seasons, with three months of thirty days each. The solstices, equinoxes, and new years eve are known as the Turnings, and are considered to be outside of the normal calendar.
