@@ -1,5 +1,5 @@
 +++
-sort_by = "date"
+sort_by = "title"
 title = "Bitterwood Almanac"
 template = "almanac/overview.html"
 page_template = "blog-page.html"
