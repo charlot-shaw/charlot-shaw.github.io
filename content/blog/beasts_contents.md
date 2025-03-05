@@ -2,7 +2,7 @@
 title = "Beasts And Their Contents"
 date = "2022-03-29"
 [taxonomies]
-tags = ["rpg", "grimswold", "monster"]
+tags = ["rpg", "grimmswold", "monster"]
 +++
 
 *Blows dust off the old blog*
