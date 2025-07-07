@@ -31,7 +31,7 @@ I want it to include the actual time, and ideally show over a full-screened game
 
 Using snowfall-lib, my NixOS configuration follows a specific structure. To make an enableable piece of config, a [module](https://snowfall.org/guides/lib/modules/) in snowfall terms, I make a file at `modules/home/util/insomnia_reminder/default.nix`
 
-Remember `git add` it so that Nix can see it.
+Remember to `git add` it so that Nix can see it.
 
 With the standard boilerplate established in my repository, I soon have the following.
 
