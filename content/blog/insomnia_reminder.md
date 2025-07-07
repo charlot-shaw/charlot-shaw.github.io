@@ -170,7 +170,7 @@ Application Options:
   -v, --version                     Version of the package.
 ```
 
-Looking over this, and some experimentation, we want `--expire-time`, so that we can make it stick around long enough to require us acknowledge it by dismissing it.
+Looking over this, and some experimentation, we want `--expire-time`, so that we can make it stick around long enough to require us to acknowledge it by dismissing it.
  30 seconds is 30,000 milliseconds, and plenty of time to be noticed.
 For kicks, I added `--category reminder`. It's not part of [the standard](https://galago-project.org/specs/notification/0.9/x211.html), but might as well use what I searched up.
 
@@ -300,6 +300,10 @@ in {
     systemd.user.timers.${unit_name} = {
       Timer = {
         OnCalendar = "*-*-* 00,01,02,03,04,05,23:10,20,30,40,50,00";
+      };
+
+      Install = {
+        WantedBy = ["timers.target"];
       };
     };
 
