@@ -101,7 +101,7 @@ in {
 
 `let` here declares some local variables, scoped to the section following `in`.
 
-`cfg = config.${namespace}.util.logout_reminder;` looks up a certain path in the evaluated configuration to find the config of this module, so we can reference it with a short name. Note how we're using `${namespace}` here, that's how the path in the configuration uses the `namespace` variable to stay be dynamic. `${some nix code}` is how you embed a Nix epression into configuration, including in this case, Nix code itself. 
+`cfg = config.${namespace}.util.logout_reminder;` looks up a certain path in the evaluated configuration to find the config of this module, so we can reference it with a short name. Note how we're using `${namespace}` here, that's how the path in the configuration uses the `namespace` variable to stay be dynamic. `${some nix code}` is how you embed a Nix expression into configuration, including in this case, Nix code itself. 
 
 
 `options.${namespace}.util.logout_reminder` establishes the path we looked up in the prior line. (Sorry it's kinda topsy turvy, but that's how nix rolls.) Starting with `options` means we're declaring how we can be configured in this block. (technically, it's an attribute set. Think dictionary in Python or map in Clojure.) 
