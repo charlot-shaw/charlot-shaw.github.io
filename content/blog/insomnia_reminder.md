@@ -124,7 +124,7 @@ Finally, we've got this section. `options` defined what could be configured, `co
 
 `lib.mkIf cfg.enable {}`, `cfg` is that shorthand path to our own config we established with the `let`. `lib.mkIf` will only include the next map if expression `cfg.enable` is true. IE, if we don't enable our configuration, our module becomes a no-op, with no effect on the system.
 
-Note, we could look up any other piece of confiration if we needed to by just finding other paths in `config`. Handy if our module would conflict with something, or we needed to perform different logic if a different Desktop Environment or audio driver was installed.
+Note, we could look up any other piece of configuration if we needed to by just finding other paths in `config`. Handy if our module would conflict with something, or we needed to perform different logic if a different Desktop Environment or audio driver was installed.
 
 `home.packages` is the list of packages installed for this user. `pkgs.libnotify` is the package containing `notify-send`. 
 
