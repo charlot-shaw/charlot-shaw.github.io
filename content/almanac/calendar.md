@@ -52,7 +52,18 @@ The anniversary of the [Ghalstrae Pact](@/almanac/holds.md#ghalstrae-pact), and 
 
 ### Sunreign
 
+#### Allsalve's Day
+*22nd of Sunreign*
+
+A celebration of health, of healers, midwives, alchemists and similar, who care for the body. Scars are left unhidden, those who are recovering from long term ailments are honored at the small, private parties traditionally thrown.
+
 ### Harvestripe
+
+
+#### Cloak Of The Sky
+*30th of Sunreign*
+
+Legend has it that a young girl bargained for the end of an eternal summer with the King of the Elves, who wanted to see only what was green and beautiful, even as the earth fell to dust below his garden's roots. He remained unmoved, but granted her a token for her passion. A magic cloak to break the dusty winds that were blowing down from the Cairnsrach mountains. She captured the breeze in it's folds, picked loose it's threads and flew it into the sky as a kite, where it became the storms marking the end of summer, and giving the earth the shade it needed.
 
 ## Fall
 
